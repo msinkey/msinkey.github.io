@@ -1,165 +1,41 @@
 # ============================================================
-# _config.yml for an economist's site (Academic Pages template)
-# Replace everything in CAPS or marked "CHANGE". Keep the spacing
-# and colons exactly as they are. YAML is picky about indentation.
-# After editing, commit the file and wait 1-2 minutes for the rebuild.
+# _config.yml for an economist's site (Minimal Mistakes theme)
+# Replace everything marked CHANGE. Keep spacing and colons as is.
+# Use straight quotes (" ") and spaces, never tabs.
 # ============================================================
 
 # ---------- Site settings ----------
 locale                   : "en-US"
-title                    : "Michael Sinkey"                      # CHANGE
-title_separator          : "-"
-name                     : &name "Michael Sinkey"                # CHANGE
-description              : &description "applied microeconomist. UWG."   # CHANGE
-url                      : "https://msinkey.github.io" # CHANGE
-baseurl                  : ""                               # leave empty for a username.github.io site
+title                    : "Michael Sinkey"                          # CHANGE
+name                     : "Michael Sinkey"                          # CHANGE
+description              : "Economist working on LABOR ECONOMICS, DEVELOPMENT, AND APPLIED MICROECONOMICS."   # CHANGE
+url                      : "https://msinkey.github.io"     # CHANGE
+baseurl                  : ""
 repository               : "msinkey/msinkey.github.io"  # CHANGE
 breadcrumbs              : false
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled"
-talkmap_link             : false
+search                   : false
+timezone                 : America/Chicago                      # CHANGE if needed
 
 # ---------- Theme ----------
-remote_theme             : "academicpages/academicpages.github.io"
-minimal_mistakes_skin    : "default"                        # try "air", "dirt", or "neutral" for other looks
-search                   : true
-search_full_content      : true
-search_provider          : lunr
-lunr:
-  search_within_pages    : true
+remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin    : "default"    # other options: "air", "neutral", "dirt", "sunrise"
 
-# ---------- Reading files ----------
-include:
-  - .htaccess
-  - _pages
-  - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - package-lock.json
-  - Rakefile
-  - README
-  - tmp
-  - /docs
-  - /node_modules
-  - /_scripts
-keep_files:
-  - .git
-  - .svn
-encoding                 : "utf-8"
-markdown_ext             : "markdown,mkdown,mkdn,mkd,md"
-
-# ---------- Conversion ----------
+# ---------- Build settings ----------
 markdown                 : kramdown
 highlighter              : rouge
-lsi                      : false
-excerpt_separator        : "\n\n"
-incremental              : false
-
-# ---------- Markdown processing ----------
-kramdown:
-  input                  : GFM
-  hard_wrap              : false
-  auto_ids               : true
-  footnote_nr            : 1
-  entity_output          : as_char
-  toc_levels             : 1..6
-  smart_quotes           : lsquo,rsquo,ldquo,rdquo
-  enable_coderay         : false
-
-# ---------- Sass/SCSS ----------
-sass:
-  sass_dir               : _sass
-  style                  : compressed
-
-# ---------- Outputting ----------
 permalink                : /:categories/:title/
-paginate                 : 5
-paginate_path            : /page:num/
-timezone                 : America/Chicago                  # CHANGE to your timezone
+include:
+  - _pages
 
-# ---------- Plugins ----------
 plugins:
   - jekyll-remote-theme
-  - jekyll-paginate
+  - jekyll-include-cache
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jemoji
-  - jekyll-redirect-from
-
-whitelist:
-  - jekyll-remote-theme
   - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-redirect-from
-
-# ---------- Archives ----------
-category_archive:
-  type                   : jekyll-archives
-  path                   : /categories/
-tag_archive:
-  type                   : jekyll-archives
-  path                   : /tags/
-jekyll-archives:
-  enabled                : all
-  layouts:
-    year                 : archive-taxonomy
-    month                : archive-taxonomy
-    day                  : archive-taxonomy
-    tag                  : archive-taxonomy
-  permalinks:
-    year                 : /year-archive/:year/
-    month                : /month-archive/:year/:month/
-    day                  : /day-archive/:year/:month/:day/
-    tag                  : /tags/:name/
-
-# ---------- HTML compression ----------
-compress_html:
-  clippings              : all
-  ignore:
-    envs                 : development
-
-# ---------- Collections (these power your Research, Talks, Teaching pages) ----------
-collections:
-  teaching:
-    output               : true
-    permalink            : /:collection/:path/
-  publications:
-    output               : true
-    permalink            : /:collection/:path/
-  portfolio:
-    output               : true
-    permalink            : /:collection/:path/
-  talks:
-    output               : true
-    permalink            : /:collection/:path/
 
 # ---------- Defaults ----------
 defaults:
-  # Posts (news / blog)
   - scope:
       path: ""
       type: posts
@@ -170,81 +46,41 @@ defaults:
       comments: false
       share: false
       related: false
-  # Pages (CV, Research, etc.)
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: true
-  # Publications / working papers
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: false
-      comments: false
-  # Talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talks
-      author_profile: true
-      share: false
-  # Teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: false
-  # Portfolio / projects
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: false
 
-# ---------- Sidebar author profile ----------
+# ---------- Sidebar profile ----------
 author:
-  name             : "Michael Sinkey"                            # CHANGE
-  avatar           : "prof1.jpg"                          # upload a headshot to the /images folder with this filename
-  bio              : "Associate Professor of Economics. Director, CBER."   # CHANGE (keep it to one line)
-  location         : "Carrollton, GA"                          # CHANGE
-  employer         : "UWG"                      # CHANGE
-  email            : "msinkey@westga.edu"                   # CHANGE
-  googlescholar    : "https://scholar.google.com/citations?user=XXXXXXXX"   # CHANGE or delete the line
-  orcid            : "https://orcid.org/0000-0000-0000-0000"                # CHANGE or delete the line
-  linkedin         : "YOURHANDLE"                           # CHANGE or delete the line
-  github           : "YOURUSERNAME"                         # CHANGE
-  twitter          : ""                                     # optional (handle only)
-  # Delete or leave blank anything you don't use. For SSRN, RePEc/IDEAS, and
-  # NBER, add them as links in your CV or Research page instead; the template
-  # has no built-in icons for them.
+  name             : "Michael Sinkey"                                # CHANGE
+  avatar           : "/images/prof1.jpg"                      # photo in the images folder
+  bio              : "Associate Professor of Economics. UWG."   # CHANGE
+  location         : "Carrollton, GA"                              # CHANGE
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "msinkey@westga.edu"                          # CHANGE
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=PI6vA6sAAAAJ" # CHANGE or delete these 3 lines
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0000-0000-0000"              # CHANGE or delete these 3 lines
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/msinkey"                    # CHANGE
 
 # ---------- Footer ----------
 footer:
   links:
-    - label: "Google Scholar"
-      icon: "ai ai-google-scholar-square"
-      url: "https://scholar.google.com/citations?user=XXXXXXXX"   # CHANGE or delete this block
-    - label: "ORCID"
-      icon: "fab fa-fw fa-orcid"
-      url: "https://orcid.org/0000-0000-0000-0000"                # CHANGE or delete this block
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/YOURUSERNAME"                      # CHANGE
+      url: "https://github.com/YOURUSERNAME"                    # CHANGE
 
-# ---------- Optional extras (leave as is) ----------
 comments:
   provider               : false
 analytics:
   provider               : false
-atom_feed:
-  path                   : false
