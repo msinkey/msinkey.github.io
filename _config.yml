@@ -8,7 +8,7 @@
 locale                   : "en-US"
 title                    : "Michael Sinkey"                          # CHANGE
 name                     : "Michael Sinkey"                          # CHANGE
-description              : "Economist working on LABOR ECONOMICS, DEVELOPMENT, AND APPLIED MICROECONOMICS."   # CHANGE
+description              : "applied micro. UWG."   # CHANGE
 url                      : "https://msinkey.github.io"     # CHANGE
 baseurl                  : ""
 repository               : "msinkey/msinkey.github.io"  # CHANGE
@@ -60,25 +60,19 @@ author:
   bio              : "Associate Professor of Economics. UWG."   # CHANGE
   location         : "Carrollton, GA"                              # CHANGE
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "msinkey@westga.edu"                          # CHANGE
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=PI6vA6sAAAAJ" # CHANGE or delete these 3 lines
     - label: "ORCID"
       icon: "fab fa-fw fa-orcid"
-      url: "https://orcid.org/0000-0000-0000-0000"              # CHANGE or delete these 3 lines
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/msinkey"                    # CHANGE
-
+      url: "https://orcid.org/0000-0003-3667-0690"              # CHANGE or delete these 3 lines
+    
 # ---------- Footer ----------
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/YOURUSERNAME"                    # CHANGE
+      url: "https://github.com/msinkey"                    # CHANGE
 
 comments:
   provider               : false
