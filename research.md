@@ -37,3 +37,7 @@ CRSP Mutual Funds**, with Bruce Bird, Joey Smith, and Alex Smith. *Journal of Fo
 **Name, Image, and Likeness, Socioeconomic Background, and Labor Market Decisions: The Case of College Football**, with Richard Paulsen, Georgy Shukaylo, Tarini Sathe and Flynn Goel. *Journal of Sport Management*, forthcoming
 
 [JSM](https://journals.humankinetics.com/view/journals/jsm/aop/article-10.1123-jsm.2026-0115/article-10.1123-jsm.2026-0115.xml)
+
+**The Impact of Socioeconomic Background on the Timing of Long-Term cContracts in Major League Baseball**, with Richard Paulsen. *Sport Management Review*, 2025
+
+[SMR](https://www.tandfonline.com/doi/full/10.1080/14413523.2025.2505272)
